@@ -1,6 +1,6 @@
 from foundry_local_sdk import FoundryLocalManager, Configuration
 
-config = Configuration(app_name="yerel-yapay-zeka")
+config = Configuration(app_name="local-ai-assistant")
 manager = FoundryLocalManager(config)
 catalog = manager.catalog
 
@@ -9,11 +9,11 @@ model.load()
 
 client = model.get_chat_client()
 response = client.complete_chat(
-    messages=[{"role": "user", "content": "Merhaba! Kendini tanıt."}]
+    messages=[{"role": "user", "content": "Hello! Introduce yourself."}]
 )
 
-cevap = response.choices[0].message.content
-if "</think>" in cevap:
-    cevap = cevap.split("</think>")[-1].strip()
+answer = response.choices[0].message.content
+if "</think>" in answer:
+    answer = answer.split("</think>")[-1].strip()
 
-print(f"AI: {cevap}")
+print(f"AI: {answer}")
