@@ -5,6 +5,11 @@ manager = FoundryLocalManager(config)
 catalog = manager.catalog
 
 model = catalog.get_model("qwen3-embedding-0.6b")
+
+print("Downloading model...")
+model.download()
+print(f"Cached: {model.is_cached}")
+
 model.load()
 client = model.get_embedding_client()
 

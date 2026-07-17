@@ -5,6 +5,11 @@ manager = FoundryLocalManager(config)
 catalog = manager.catalog
 
 model = catalog.get_model("qwen3-0.6b")
+
+print("Model indiriliyor...")
+model.download()
+print(f"İndirildi mi: {model.is_cached}")
+
 model.load()
 
 client = model.get_chat_client()

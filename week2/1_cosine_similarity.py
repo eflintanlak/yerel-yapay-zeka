@@ -1,6 +1,6 @@
 from foundry_local_sdk import FoundryLocalManager, Configuration
 import math
-config = Configuration(app_name="yerel-yapay-zeka")
+config = Configuration(app_name="local-artificial-intelligence")
 manager = FoundryLocalManager(config)
 catalog = manager.catalog
 model = catalog.get_model("qwen3-embedding-0.6b")
