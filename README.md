@@ -20,7 +20,7 @@ Embedding Model (qwen3-embedding-0.6b)
     ↓
 Cosine Similarity Search
     ↓
-SQLite Database (10 chunks from 5 documents)
+SQLite Database (16 chunks from 8 documents)
     ↓
 Top-K Relevant Chunks
     ↓
@@ -45,6 +45,17 @@ week4/ - Full RAG pipeline and interactive assistant
 week5/ - Testing and evaluation
 documents/ - Knowledge base source files (aircraft electrical/electronics topics)
 
+## Knowledge Base Topics
+
+1. Aircraft Electrical Systems
+2. Avionics Systems
+3. Flight Control Systems
+4. Aircraft Sensors and Instruments
+5. Power Distribution Systems
+6. Aircraft Communication Systems
+7. Engine Monitoring Systems
+8. Lightning Protection and EMI Shielding
+
 ## How to Run
 
 1. Install dependencies:
@@ -59,7 +70,8 @@ documents/ - Knowledge base source files (aircraft electrical/electronics topics
 4. Ask questions like:
    - "What is fly-by-wire?"
    - "How does the pitot tube measure airspeed?"
-   - "How do circuit breakers work in aircraft?"
+   - "What is FADEC?"
+   - "How does lightning protection work on aircraft?"
 
 ## Test Results
 
@@ -82,7 +94,7 @@ Initial testing showed the model would sometimes use outside knowledge instead o
 ## Known Limitations
 
 - Small model (0.6B parameters) may occasionally produce imperfect answers
-- Knowledge base is limited to 5 short documents on aircraft electrical/electronics topics
+- Knowledge base is limited to 8 short documents on aircraft electrical/electronics topics
 - Response time is approximately 12-15 seconds per query on CPU
 
 ## Author
